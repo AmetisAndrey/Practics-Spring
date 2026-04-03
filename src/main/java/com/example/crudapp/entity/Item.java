@@ -3,7 +3,6 @@ package com.example.crudapp.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.Instant;
 import java.util.UUID;
 
@@ -14,7 +13,7 @@ import java.util.UUID;
 public class Item {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(columnDefinition = "uuid")
     private UUID id;
 
