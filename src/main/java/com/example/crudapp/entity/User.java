@@ -14,14 +14,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
-
 @Entity
-@Table(name="Users")
+@Table(name = "users")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User implements UserDetails{
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -36,42 +35,43 @@ public class User implements UserDetails{
     @Column(nullable = false)
     private String password;
 
-    @Column(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Column(name = "created_at")
     private Instant createdAt;
 
-    @Column(name ="updated_at")
+    @Column(name = "updated_at")
     private Instant updatedAt;
 
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         createdAt = Instant.now();
         updatedAt = Instant.now();
         if (role == null) role = Role.USER;
     }
 
     @PreUpdate
-    protected void onUpdate(){
+    protected void onUpdate() {
         updatedAt = Instant.now();
     }
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities(){
-        return List.of(new SimpleGrantedAuthority("Role_" + role.name()));
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority("ROLE_" + role.name()));
     }
-    @Override
-    public boolean isAccountNonExpired() {return true;}
 
     @Override
-    public boolean isAccountNonLocked() {return true;}
+    public boolean isAccountNonExpired() { return true; }
 
     @Override
-    public boolean isCredentialsNonExpired() {return true;}
+    public boolean isAccountNonLocked() { return true; }
 
     @Override
-    public boolean isEnabled() {return true;}
+    public boolean isCredentialsNonExpired() { return true; }
+
+    @Override
+    public boolean isEnabled() { return true; }
 }
 
 enum Role {
