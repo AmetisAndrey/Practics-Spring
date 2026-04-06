@@ -1,10 +1,12 @@
 package com.example.crudapp.controller;
 
+import com.example.crudapp.annotation.LogExecutionTime;
 import com.example.crudapp.dto.ItemCreateUpdateDto;
 import com.example.crudapp.dto.ItemDto;
 import com.example.crudapp.service.ItemService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -18,11 +20,13 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/list")
 @RequiredArgsConstructor
+@Slf4j
 public class ItemController {
 
     private final ItemService itemService;
 
     @GetMapping
+    @LogExecutionTime
     public String list(@RequestParam(required = false) String search,
                        @RequestParam(defaultValue = "0") int page,
                        @RequestParam(defaultValue = "10") int size,
@@ -30,10 +34,7 @@ public class ItemController {
                        @RequestParam(defaultValue = "desc") String dir,
                        Model model) {
 
-        Sort.Direction direction = dir.equalsIgnoreCase("asc")
-                ? Sort.Direction.ASC
-                : Sort.Direction.DESC;
-
+        Sort.Direction direction = dir.equalsIgnoreCase("asc") ? Sort.Direction.ASC : Sort.Direction.DESC;
         PageRequest pageRequest = PageRequest.of(page, size, Sort.by(direction, sort));
         Page<ItemDto> itemPage = itemService.getAll(search, pageRequest);
 
@@ -42,7 +43,6 @@ public class ItemController {
         model.addAttribute("sort", sort);
         model.addAttribute("dir", dir);
 
-        // ищется шаблон src/main/resources/templates/list.html
         return "list";
     }
 
@@ -50,7 +50,6 @@ public class ItemController {
     public String createForm(Model model) {
         model.addAttribute("item", new ItemCreateUpdateDto());
         model.addAttribute("isNew", true);
-        // ищется templates/form.html
         return "form";
     }
 
@@ -63,7 +62,6 @@ public class ItemController {
             return "form";
         }
         itemService.create(dto);
-        // после создания возвращаемся на список /list
         return "redirect:/list";
     }
 
@@ -77,8 +75,6 @@ public class ItemController {
         model.addAttribute("itemId", id);
         model.addAttribute("item", dto);
         model.addAttribute("isNew", false);
-
-        // без начального слэша – просто "form"
         return "form";
     }
 
