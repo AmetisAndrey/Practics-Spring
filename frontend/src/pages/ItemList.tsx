@@ -26,7 +26,7 @@ const ItemList: React.FC = () => {
     }, [page, search]);
 
     const handleDelete = async (id: string) => {
-        if (window.confirm('Вы действительно хотите удалить?')) {
+        if (window.confirm('Вы действительно хотите удалить задачу?')) {
             await deleteItem(id);
             fetchItems();
         }
@@ -40,97 +40,83 @@ const ItemList: React.FC = () => {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl font-bold text-gray-800">Заметки</h1>
-                <Link
-                    to="/items/new"
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition"
-                >
-                     Создать новое
-                </Link>
+            <div className="glass-card p-6 mb-6">
+                <div className="flex justify-between items-center flex-wrap gap-4">
+                    <h1 className="text-3xl font-bold text-white">Задачи</h1>
+                    <Link to="/items/new" className="btn-primary">
+                        Создать задачу
+                    </Link>
+                </div>
             </div>
 
             <form onSubmit={handleSearch} className="mb-6">
                 <div className="flex gap-2">
                     <input
                         type="text"
-                        placeholder="Поиск по названию или описанию..."
-                        className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Поиск..."
+                        className="glass-input flex-1 input-field"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                    <button
-                        type="submit"
-                        className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition"
-                    >
-                       Поиск
+                    <button type="submit" className="btn-primary">
+                        Поиск
                     </button>
                 </div>
             </form>
 
-            {loading && <div className="text-center text-gray-500">Загрузка</div>}
+            {loading && (
+                <div className="text-center text-white/60 py-8">
+                    Загрузка...
+                </div>
+            )}
 
-            <div className="overflow-x-auto shadow-md rounded-lg">
-                <table className="min-w-full bg-white">
-                    <thead className="bg-gray-800 text-white">
-                    <tr>
-                        <th className="py-3 px-6 text-left">Название</th>
-                        <th className="py-3 px-6 text-left">Описание</th>
-                        <th className="py-3 px-6 text-left">Время создания</th>
-                        <th className="py-3 px-6 text-center">Действие</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {items.map((item) => (
-                        <tr key={item.id} className="border-b hover:bg-gray-50">
-                            <td className="py-3 px-6">{item.name}</td>
-                            <td className="py-3 px-6">{item.description || '—'}</td>
-                            <td className="py-3 px-6">{new Date(item.createdAt).toLocaleDateString()}</td>
-                            <td className="py-3 px-6 text-center space-x-2">
-                                <Link
-                                    to={`/items/${item.id}/edit`}
-                                    className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded inline-block"
-                                >
-                                    Изменить
-                                </Link>
-                                <button
-                                    onClick={() => handleDelete(item.id)}
-                                    className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
-                                >
-                                    Удалить
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
-                    {items.length === 0 && (
-                        <tr>
-                            <td colSpan={4} className="py-4 text-center text-gray-500">
-                                Заметка не найдена
-                            </td>
-                        </tr>
-                    )}
-                    </tbody>
-                </table>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {items.map((item) => (
+                    <div key={item.id} className="card p-6 hover:transform hover:scale-105 transition-all duration-300">
+                        <h3 className="text-xl font-semibold text-gray-600 mb-2">{item.name}</h3>
+                        <p className="text-gray-700 mb-4">{item.description || 'Нет описания'}</p>
+                        <div className="text-sm text-white/40 mb-4">
+                            Created: {new Date(item.createdAt).toLocaleDateString()}
+                        </div>
+                        <div className="flex gap-2">
+                            <Link to={`/items/${item.id}/edit`} className="btn-primary text-sm flex-1 text-center">
+                                Изменить
+                            </Link>
+                            <button
+                                onClick={() => handleDelete(item.id)}
+                                className="bg-red-700/60 hover:bg-red-500/30 text-white px-4 py-2 rounded-lg transition flex-1"
+                            >
+                                Удалить
+                            </button>
+                        </div>
+                    </div>
+                ))}
             </div>
 
+            {items.length === 0 && !loading && (
+                <div className="glass-card p-12 text-center">
+                    <p className="text-white/60 text-lg">Нет задач</p>
+                </div>
+            )}
+
             {totalPages > 1 && (
-                <div className="flex justify-center mt-6 space-x-2">
+                <div className="flex justify-center mt-8 space-x-2">
                     <button
                         onClick={() => setPage((p) => p - 1)}
                         disabled={page === 0}
-                        className="px-4 py-2 bg-gray-300 text-gray-700 rounded disabled:opacity-50"
+                        className="glass-button-secondary disabled:opacity-50"
                     >
-                        Previous
+                        Назад
                     </button>
-                    <span className="px-4 py-2 bg-gray-800 text-white rounded">
+                    <span className="glass-card px-4 py-2 text-white">
             {page + 1} / {totalPages}
           </span>
                     <button
                         onClick={() => setPage((p) => p + 1)}
                         disabled={page + 1 >= totalPages}
-                        className="px-4 py-2 bg-gray-300 text-gray-700 rounded disabled:opacity-50"
+                        className="glass-button-secondary disabled:opacity-50"
                     >
-                        Следующее
+                        Вперед
                     </button>
                 </div>
             )}

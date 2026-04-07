@@ -30,7 +30,7 @@ const ItemForm: React.FC = () => {
             else await createItem(form);
             navigate('/');
         } catch (err) {
-            setError('Error saving item');
+            setError('Ошибка сохранения');
         }
     };
 
@@ -38,12 +38,12 @@ const ItemForm: React.FC = () => {
         <div className="container mx-auto px-4 py-8 max-w-2xl">
             <div className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                    {id ? 'Edit Item' : 'Create Item'}
+                    {id ? 'Изменить задачу' : 'Создать задачу'}
                 </h2>
                 {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <label className="block text-gray-700 mb-2">Name *</label>
+                        <label className="block text-gray-700 mb-2">Название</label>
                         <input
                             type="text"
                             name="name"
@@ -56,7 +56,7 @@ const ItemForm: React.FC = () => {
                         />
                     </div>
                     <div className="mb-6">
-                        <label className="block text-gray-700 mb-2">Description</label>
+                        <label className="block text-gray-700 mb-2">Описание</label>
                         <textarea
                             name="description"
                             rows={4}
@@ -69,16 +69,16 @@ const ItemForm: React.FC = () => {
                     <div className="flex gap-3">
                         <button
                             type="submit"
-                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition"
+                            className="btn-primary text-white px-4 py-2 rounded transition"
                         >
-                            Save
+                            Сохранить
                         </button>
                         <button
                             type="button"
                             onClick={() => navigate('/')}
-                            className="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded transition"
+                            className="bg-red-700/60  text-white px-4 py-3 rounded-lg transition"
                         >
-                            Cancel
+                            Отменить
                         </button>
                     </div>
                 </form>
