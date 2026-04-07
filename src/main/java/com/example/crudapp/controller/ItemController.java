@@ -1,4 +1,4 @@
-package com.example.crudapp.controlm
+package com.example.crudapp.controller;
 import com.example.crudapp.annotation.LogExecutionTime;
 import com.example.crudapp.dto.ItemCreateUpdateDto;
 import com.example.crudapp.dto.ItemDto;

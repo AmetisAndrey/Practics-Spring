@@ -10,9 +10,11 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 @Slf4j
+
+
 public class PerformanceAspect {
 
-    @Around("@annotation(LogExecutionTime)")
+    @Around("@annotation(com.example.crudapp.annotation.LogExecutionTime)")
     public Object measureExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable{
         long startTime = System.currentTimeMillis();
 

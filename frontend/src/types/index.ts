@@ -1,16 +1,3 @@
-export interface Item {
-    id: string;
-    name: string;
-    description: string;
-    createdAt: string;
-    updateAt: string;
-}
-
-export interface ItemCreateUpdate {
-    name: string;
-    description?:string;
-}
-
 export interface AuthRequest {
     username: string;
     password: string;
@@ -26,6 +13,19 @@ export interface AuthResponse {
     token: string;
     username: string;
     role: string;
+}
+
+export interface Item {
+    id: string;
+    name: string;
+    description: string;
+    createdAt: string;
+    updatedAt: string;
+}
+
+export interface ItemCreateUpdate {
+    name: string;
+    description?: string;
 }
 
 export interface PageResponse<T> {

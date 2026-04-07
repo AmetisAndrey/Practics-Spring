@@ -1,0 +1,718 @@
+2026-04-07 11:38:36.686 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 14728 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 11:38:36.687 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 11:38:36.687 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 11:38:37.188 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 11:38:37.218 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2026-04-07 11:38:37.474 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+2026-04-07 11:38:37.485 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-07 11:38:37.495 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:796)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:600)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.crudapp.CrudappApplication.main(CrudappApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': error Type referred to is not an annotation type: LogExecutionTime
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:605)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:412)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: LogExecutionTime
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	... 36 common frames omitted
+2026-04-07 11:47:26.758 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 21320 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 11:47:26.759 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 11:47:26.759 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 11:47:27.218 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 11:47:27.245 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2026-04-07 11:47:27.463 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+2026-04-07 11:47:27.478 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-07 11:47:27.487 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:796)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:600)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.crudapp.CrudappApplication.main(CrudappApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': error Type referred to is not an annotation type: LogExecutionTime
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:605)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:412)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: LogExecutionTime
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	... 36 common frames omitted
+2026-04-07 11:57:58.157 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 18344 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 11:57:58.158 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 11:57:58.158 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 11:57:58.636 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 11:57:58.664 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2026-04-07 11:57:58.884 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+2026-04-07 11:57:58.896 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-07 11:57:58.904 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:796)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:600)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.crudapp.CrudappApplication.main(CrudappApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': error Type referred to is not an annotation type: LogExecutionTime
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:605)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:412)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: LogExecutionTime
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	... 36 common frames omitted
+2026-04-07 15:03:22.460 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 25.0.2 with PID 2288 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 15:03:22.461 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 15:03:22.462 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 15:03:22.939 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 15:03:22.969 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2026-04-07 15:03:23.189 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+2026-04-07 15:03:23.199 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-07 15:03:23.210 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:796)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:600)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.crudapp.CrudappApplication.main(CrudappApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': error Type referred to is not an annotation type: LogExecutionTime
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:605)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:412)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:509)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: LogExecutionTime
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	... 36 common frames omitted
+2026-04-07 16:10:16.409 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 9572 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 16:10:16.410 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 16:10:16.410 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 16:10:16.858 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 16:10:16.885 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-04-07 16:10:17.277 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-04-07 16:10:17.283 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-07 16:10:17.284 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-04-07 16:10:17.335 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-07 16:10:17.335 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 901 ms
+2026-04-07 16:10:17.460 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-07 16:10:17.576 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18c820d2
+2026-04-07 16:10:17.577 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-07 16:10:17.622 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-07 16:10:17.647 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-04-07 16:10:17.649 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-04-07 16:10:17.767 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-07 16:10:17.816 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-07 16:10:18.220 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 16:10:18.293 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-07 16:10:18.483 [main] DEBUG c.e.c.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-07 16:10:18.633 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-07 16:10:18.821 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-04-07 16:10:18.853 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f65a6d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67726dd1, org.springframework.security.web.context.SecurityContextHolderFilter@1c12f0f4, org.springframework.security.web.header.HeaderWriterFilter@644eed73, org.springframework.security.web.authentication.logout.LogoutFilter@38821ada, com.example.crudapp.security.JwtAuthenticationFilter@38affd02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@755c29b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@608f79a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45c270f9, org.springframework.security.web.session.SessionManagementFilter@7719b257, org.springframework.security.web.access.ExceptionTranslationFilter@4194a77f, org.springframework.security.web.access.intercept.AuthorizationFilter@41a6cd9e]
+2026-04-07 16:10:19.125 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-07 16:10:19.132 [main] INFO  c.example.crudapp.CrudappApplication - Started CrudappApplication in 2.957 seconds (process running for 3.174)
+2026-04-07 16:10:56.615 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-07 16:10:56.615 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-07 16:10:56.616 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-07 16:18:09.619 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-07 16:18:09.621 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-07 16:18:09.623 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-07 16:18:19.947 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 15288 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 16:18:19.948 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 16:18:19.948 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 16:18:20.386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 16:18:20.412 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2026-04-07 16:18:20.793 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-04-07 16:18:20.797 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-07 16:18:20.798 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-04-07 16:18:20.845 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-07 16:18:20.845 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 874 ms
+2026-04-07 16:18:20.969 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-07 16:18:21.063 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@697a92af
+2026-04-07 16:18:21.063 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-07 16:18:21.108 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-07 16:18:21.131 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-04-07 16:18:21.133 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-04-07 16:18:21.251 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-07 16:18:21.276 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-07 16:18:21.707 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 16:18:21.733 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-07 16:18:21.930 [main] DEBUG c.e.c.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-07 16:18:22.089 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-07 16:18:22.272 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-04-07 16:18:22.302 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@415c5469, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5aef36a9, org.springframework.security.web.context.SecurityContextHolderFilter@4fec93d0, org.springframework.security.web.header.HeaderWriterFilter@6d13cd6d, org.springframework.security.web.authentication.logout.LogoutFilter@42626e86, com.example.crudapp.security.JwtAuthenticationFilter@c0a8787, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7719b257, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@149bdb4e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19544627, org.springframework.security.web.session.SessionManagementFilter@253a8bdb, org.springframework.security.web.access.ExceptionTranslationFilter@45c73e09, org.springframework.security.web.access.intercept.AuthorizationFilter@61c946a0]
+2026-04-07 16:18:22.570 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-07 16:18:22.576 [main] INFO  c.example.crudapp.CrudappApplication - Started CrudappApplication in 2.855 seconds (process running for 3.07)
+2026-04-07 16:18:24.927 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-07 16:18:24.928 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-07 16:18:24.929 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-07 16:21:40.134 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-07 16:21:40.135 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-07 16:21:40.137 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-07 16:24:33.476 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 15456 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 16:24:33.476 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 16:24:33.477 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 16:24:33.914 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 16:24:33.942 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2026-04-07 16:24:34.325 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-04-07 16:24:34.330 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-07 16:24:34.331 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-04-07 16:24:34.377 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-07 16:24:34.377 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 877 ms
+2026-04-07 16:24:34.499 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-07 16:24:34.593 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@606d6d2c
+2026-04-07 16:24:34.594 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-07 16:24:34.640 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-07 16:24:34.666 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-04-07 16:24:34.668 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-04-07 16:24:34.789 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-07 16:24:34.814 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-07 16:24:35.213 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 16:24:35.237 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-07 16:24:35.430 [main] DEBUG c.e.c.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-07 16:24:35.576 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-07 16:24:35.751 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-04-07 16:24:35.783 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50c20b15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dcf39c6, org.springframework.security.web.context.SecurityContextHolderFilter@5988e36e, org.springframework.security.web.header.HeaderWriterFilter@bda4cbe, org.springframework.web.filter.CorsFilter@1c0f32ad, org.springframework.security.web.authentication.logout.LogoutFilter@49c74506, com.example.crudapp.security.JwtAuthenticationFilter@55e3b64d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35d31e1c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3533b614, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a4833ab, org.springframework.security.web.session.SessionManagementFilter@24032706, org.springframework.security.web.access.ExceptionTranslationFilter@7a7698f4, org.springframework.security.web.access.intercept.AuthorizationFilter@16d31c48]
+2026-04-07 16:24:36.044 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-07 16:24:36.051 [main] INFO  c.example.crudapp.CrudappApplication - Started CrudappApplication in 2.802 seconds (process running for 3.018)
+2026-04-07 16:24:55.135 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-07 16:24:55.135 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-07 16:24:55.136 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-07 16:24:55.177 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [null, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:24:55.236 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 59 мс
+2026-04-07 16:24:55.236 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:24:55.238 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 64 мс
+2026-04-07 16:43:54.330 [http-nio-8080-exec-6] INFO  c.e.c.controller.AuthController - Login attempt for user: testuser
+2026-04-07 16:43:54.330 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=testuser, password=admin123)]
+2026-04-07 16:43:54.392 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [testuser]
+2026-04-07 16:43:54.411 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=9349dc8d-125b-4a28-bab5-e1a5ae8ccfd9, username=testuser, email=test@example.com, password=$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5E, role=USER, createdAt=2026-04-07T16:22:53.753957Z, updatedAt=2026-04-07T16:22:53.753957Z)
+2026-04-07 16:43:54.412 [http-nio-8080-exec-6] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-04-07 16:43:54.413 [http-nio-8080-exec-6] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:44:10.431 [http-nio-8080-exec-8] INFO  c.e.c.controller.AuthController - Registration attempt for user: Ametis
+2026-04-07 16:44:10.432 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.register(..) с аргументом: [RegisterRequest(username=Ametis, email=ametis@mail.ru, password=123123)]
+2026-04-07 16:44:10.500 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.generateToken(..) с аргументом: [User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678100Z, updatedAt=2026-04-07T13:44:10.497678100Z)]
+2026-04-07 16:44:10.513 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.generateToken(..) вернул: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk0NTAsImV4cCI6MTc3NTY1NTg1MH0.r39Kc04p6wSS6tr7cmQkbcgBc15j23dwXNdgcJHUIoM
+2026-04-07 16:44:10.513 [http-nio-8080-exec-8] INFO  c.e.crudapp.service.UserService - Registered new user: Ametis
+2026-04-07 16:44:10.513 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод UserService.register(..) вернул: AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk0NTAsImV4cCI6MTc3NTY1NTg1MH0.r39Kc04p6wSS6tr7cmQkbcgBc15j23dwXNdgcJHUIoM, username=Ametis, role=USER)
+2026-04-07 16:44:10.537 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk0NTAsImV4cCI6MTc3NTY1NTg1MH0.r39Kc04p6wSS6tr7cmQkbcgBc15j23dwXNdgcJHUIoM]
+2026-04-07 16:44:10.549 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Ametis
+2026-04-07 16:44:10.549 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Ametis]
+2026-04-07 16:44:10.570 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)
+2026-04-07 16:44:10.571 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk0NTAsImV4cCI6MTc3NTY1NTg1MH0.r39Kc04p6wSS6tr7cmQkbcgBc15j23dwXNdgcJHUIoM, User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)]
+2026-04-07 16:44:10.573 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:44:10.576 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:44:10.578 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 2 мс
+2026-04-07 16:44:10.578 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:44:10.578 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:44:10.580 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk0NTAsImV4cCI6MTc3NTY1NTg1MH0.r39Kc04p6wSS6tr7cmQkbcgBc15j23dwXNdgcJHUIoM]
+2026-04-07 16:44:10.581 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Ametis
+2026-04-07 16:44:10.581 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Ametis]
+2026-04-07 16:44:10.583 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)
+2026-04-07 16:44:10.583 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk0NTAsImV4cCI6MTc3NTY1NTg1MH0.r39Kc04p6wSS6tr7cmQkbcgBc15j23dwXNdgcJHUIoM, User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)]
+2026-04-07 16:44:10.586 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:44:10.587 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:44:10.589 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 16:44:10.589 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:44:10.589 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:45:13.256 [http-nio-8080-exec-6] INFO  c.e.c.controller.AuthController - Login attempt for user: fgdkjlhhgbjkl;sgfjkl;sf
+2026-04-07 16:45:13.256 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=fgdkjlhhgbjkl;sgfjkl;sf, password=123123)]
+2026-04-07 16:45:13.256 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [fgdkjlhhgbjkl;sgfjkl;sf]
+2026-04-07 16:45:13.258 [http-nio-8080-exec-6] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: fgdkjlhhgbjkl;sgfjkl;sf
+2026-04-07 16:45:13.318 [http-nio-8080-exec-6] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:29.209 [http-nio-8080-exec-8] INFO  c.e.c.controller.AuthController - Login attempt for user: 13
+2026-04-07 16:45:29.209 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=13, password=12)]
+2026-04-07 16:45:29.209 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [13]
+2026-04-07 16:45:29.211 [http-nio-8080-exec-8] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: 13
+2026-04-07 16:45:29.271 [http-nio-8080-exec-8] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:30.094 [http-nio-8080-exec-9] INFO  c.e.c.controller.AuthController - Login attempt for user: 13
+2026-04-07 16:45:30.094 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=13, password=12)]
+2026-04-07 16:45:30.095 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [13]
+2026-04-07 16:45:30.096 [http-nio-8080-exec-9] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: 13
+2026-04-07 16:45:30.157 [http-nio-8080-exec-9] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:30.669 [http-nio-8080-exec-10] INFO  c.e.c.controller.AuthController - Login attempt for user: 13
+2026-04-07 16:45:30.670 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=13, password=12)]
+2026-04-07 16:45:30.670 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [13]
+2026-04-07 16:45:30.671 [http-nio-8080-exec-10] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: 13
+2026-04-07 16:45:30.730 [http-nio-8080-exec-10] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:34.461 [http-nio-8080-exec-2] INFO  c.e.c.controller.AuthController - Login attempt for user: aME
+2026-04-07 16:45:34.462 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=aME, password=121)]
+2026-04-07 16:45:34.462 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [aME]
+2026-04-07 16:45:34.463 [http-nio-8080-exec-2] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: aME
+2026-04-07 16:45:34.523 [http-nio-8080-exec-2] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:35.223 [http-nio-8080-exec-3] INFO  c.e.c.controller.AuthController - Login attempt for user: aME
+2026-04-07 16:45:35.223 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=aME, password=121)]
+2026-04-07 16:45:35.224 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [aME]
+2026-04-07 16:45:35.225 [http-nio-8080-exec-3] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: aME
+2026-04-07 16:45:35.284 [http-nio-8080-exec-3] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:35.410 [http-nio-8080-exec-4] INFO  c.e.c.controller.AuthController - Login attempt for user: aME
+2026-04-07 16:45:35.410 [http-nio-8080-exec-4] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=aME, password=121)]
+2026-04-07 16:45:35.410 [http-nio-8080-exec-4] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [aME]
+2026-04-07 16:45:35.412 [http-nio-8080-exec-4] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: aME
+2026-04-07 16:45:35.471 [http-nio-8080-exec-4] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:45:36.178 [http-nio-8080-exec-5] INFO  c.e.c.controller.AuthController - Login attempt for user: aME
+2026-04-07 16:45:36.179 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=aME, password=121)]
+2026-04-07 16:45:36.179 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [aME]
+2026-04-07 16:45:36.180 [http-nio-8080-exec-5] ERROR c.e.crudapp.aspect.LoggingAspect - В методе CustomUserDetailsService.loadUserByUsername(..) ошибка: User not found: aME
+2026-04-07 16:45:36.240 [http-nio-8080-exec-5] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:46:14.103 [http-nio-8080-exec-7] INFO  c.e.c.controller.AuthController - Registration attempt for user: 123
+2026-04-07 16:46:14.103 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.register(..) с аргументом: [RegisterRequest(username=123, email=D2@mail.ru, password=123123)]
+2026-04-07 16:46:14.164 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.generateToken(..) с аргументом: [User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163639600Z, updatedAt=2026-04-07T13:46:14.163639600Z)]
+2026-04-07 16:46:14.164 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.generateToken(..) вернул: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks
+2026-04-07 16:46:14.165 [http-nio-8080-exec-7] INFO  c.e.crudapp.service.UserService - Registered new user: 123
+2026-04-07 16:46:14.165 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод UserService.register(..) вернул: AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, username=123, role=USER)
+2026-04-07 16:46:14.176 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:14.177 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:14.177 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:14.179 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:14.179 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:14.181 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:14.182 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:14.184 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:14.184 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:14.184 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:14.185 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:14.186 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:14.186 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:14.188 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:14.188 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:14.189 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:14.190 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:14.192 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:14.192 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:14.192 [http-nio-8080-exec-1] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:31.589 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:31.590 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:31.590 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:31.592 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:31.592 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:31.593 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:31.596 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.create(..) с аргументом: [ItemCreateUpdateDto(name=Олег, description=Купить воду)]
+2026-04-07 16:46:31.597 [http-nio-8080-exec-3] INFO  c.e.crudapp.service.ItemService - Created new item with id: f8094f2f-687a-4648-b07f-1ca11005f1e2
+2026-04-07 16:46:31.598 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.create(..) вернул: null
+2026-04-07 16:46:31.606 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:31.606 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:31.607 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:31.608 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:31.608 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:31.609 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:31.610 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:31.611 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 16:46:31.612 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:31.612 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:31.613 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:31.614 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:31.614 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:31.615 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:31.615 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:31.616 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:31.618 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:31.619 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 16:46:31.619 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:31.619 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 1 мс
+2026-04-07 16:46:35.632 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:35.633 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:35.634 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:35.635 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:35.635 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:35.637 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:35.639 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.delete(..) с аргументом: [f8094f2f-687a-4648-b07f-1ca11005f1e2]
+2026-04-07 16:46:35.646 [http-nio-8080-exec-9] INFO  c.e.crudapp.service.ItemService - Deleted item with id: f8094f2f-687a-4648-b07f-1ca11005f1e2
+2026-04-07 16:46:35.646 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.delete(..) вернул: null
+2026-04-07 16:46:35.653 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:35.653 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:35.653 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:35.654 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:35.654 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:35.656 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:35.656 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:35.658 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:35.658 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:35.658 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:46:38.572 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:38.573 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:38.573 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:38.575 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:38.575 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:38.576 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:38.576 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getById(..) с аргументом: [185a4835-409f-429a-a67d-8cea32abe3dc]
+2026-04-07 16:46:38.578 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getById(..) вернул: ItemDto(id=185a4835-409f-429a-a67d-8cea32abe3dc, name=Third Item, description=Another description, createdAt=2026-04-07T11:46:31.574487Z, updatedAt=2026-04-07T11:46:31.574487Z)
+2026-04-07 16:46:38.580 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:38.581 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:38.581 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:38.582 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:38.582 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:38.583 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:38.584 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getById(..) с аргументом: [185a4835-409f-429a-a67d-8cea32abe3dc]
+2026-04-07 16:46:38.585 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getById(..) вернул: ItemDto(id=185a4835-409f-429a-a67d-8cea32abe3dc, name=Third Item, description=Another description, createdAt=2026-04-07T11:46:31.574487Z, updatedAt=2026-04-07T11:46:31.574487Z)
+2026-04-07 16:46:42.009 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:42.010 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:42.010 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:42.012 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:42.012 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:42.013 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:42.015 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.update(..) с аргументом: [185a4835-409f-429a-a67d-8cea32abe3dc, ItemCreateUpdateDto(name=Third Item, description=Дядя)]
+2026-04-07 16:46:42.016 [http-nio-8080-exec-6] INFO  c.e.crudapp.service.ItemService - Updated item with id: 185a4835-409f-429a-a67d-8cea32abe3dc
+2026-04-07 16:46:42.016 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.update(..) вернул: null
+2026-04-07 16:46:42.052 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:42.053 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:42.053 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:42.054 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:42.055 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:42.056 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:42.057 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:42.058 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 16:46:42.058 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:42.058 [http-nio-8080-exec-9] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 1 мс
+2026-04-07 16:46:42.059 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks]
+2026-04-07 16:46:42.060 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: 123
+2026-04-07 16:46:42.060 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [123]
+2026-04-07 16:46:42.061 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)
+2026-04-07 16:46:42.061 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiIxMjMiLCJpYXQiOjE3NzU1Njk1NzQsImV4cCI6MTc3NTY1NTk3NH0.9sWP2deYXdJqp2upaXvI3kcInfDT0hgCa2_AoYRmPks, User(id=35146cd1-63a0-4a6e-8407-c63af3741adc, username=123, email=D2@mail.ru, password=$2a$10$S4voRQsDVmNCED15gxlY5OPuhbXlc2ZMB3WK/yWBh/31uop94FmPi, role=USER, createdAt=2026-04-07T13:46:14.163640Z, updatedAt=2026-04-07T13:46:14.163640Z)]
+2026-04-07 16:46:42.063 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:46:42.064 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:46:42.065 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 16:46:42.065 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:46:42.065 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 1 мс
+2026-04-07 16:48:35.381 [http-nio-8080-exec-5] INFO  c.e.c.controller.AuthController - Login attempt for user: admin
+2026-04-07 16:48:35.382 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=admin, password=admin123)]
+2026-04-07 16:48:35.382 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [admin]
+2026-04-07 16:48:35.384 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=e90d8138-a525-424e-a114-454a08ead788, username=admin, email=admin@example.com, password=$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5E, role=ADMIN, createdAt=2026-04-07T11:46:31.574487Z, updatedAt=2026-04-07T11:46:31.574487Z)
+2026-04-07 16:48:35.384 [http-nio-8080-exec-5] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-04-07 16:48:35.384 [http-nio-8080-exec-5] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:48:50.933 [http-nio-8080-exec-6] INFO  c.e.c.controller.AuthController - Login attempt for user: testuser
+2026-04-07 16:48:50.934 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=testuser, password=admin123)]
+2026-04-07 16:48:50.934 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [testuser]
+2026-04-07 16:48:50.935 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=9349dc8d-125b-4a28-bab5-e1a5ae8ccfd9, username=testuser, email=test@example.com, password=$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5E, role=USER, createdAt=2026-04-07T16:22:53.753957Z, updatedAt=2026-04-07T16:22:53.753957Z)
+2026-04-07 16:48:50.935 [http-nio-8080-exec-6] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-04-07 16:48:50.936 [http-nio-8080-exec-6] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:49:01.527 [http-nio-8080-exec-7] INFO  c.e.c.controller.AuthController - Login attempt for user: testuser
+2026-04-07 16:49:01.528 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=testuser, password=$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5E)]
+2026-04-07 16:49:01.528 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [testuser]
+2026-04-07 16:49:01.529 [http-nio-8080-exec-7] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=9349dc8d-125b-4a28-bab5-e1a5ae8ccfd9, username=testuser, email=test@example.com, password=$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iAt6Z5E, role=USER, createdAt=2026-04-07T16:22:53.753957Z, updatedAt=2026-04-07T16:22:53.753957Z)
+2026-04-07 16:49:01.529 [http-nio-8080-exec-7] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
+2026-04-07 16:49:01.529 [http-nio-8080-exec-7] ERROR c.e.crudapp.aspect.LoggingAspect - В методе UserService.login(..) ошибка: Bad credentials
+2026-04-07 16:49:12.405 [http-nio-8080-exec-10] INFO  c.e.c.controller.AuthController - Login attempt for user: Ametis
+2026-04-07 16:49:12.405 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.login(..) с аргументом: [AuthRequest(username=Ametis, password=123123)]
+2026-04-07 16:49:12.405 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Ametis]
+2026-04-07 16:49:12.407 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)
+2026-04-07 16:49:12.467 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.generateToken(..) с аргументом: [User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)]
+2026-04-07 16:49:12.468 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.generateToken(..) вернул: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk3NTIsImV4cCI6MTc3NTY1NjE1Mn0.7KB2Lqn1-ONSohZiY50fEzTLlRpc-DWyJrRix_pY99c
+2026-04-07 16:49:12.468 [http-nio-8080-exec-10] INFO  c.e.crudapp.service.UserService - User logged in: Ametis
+2026-04-07 16:49:12.468 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод UserService.login(..) вернул: AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk3NTIsImV4cCI6MTc3NTY1NjE1Mn0.7KB2Lqn1-ONSohZiY50fEzTLlRpc-DWyJrRix_pY99c, username=Ametis, role=USER)
+2026-04-07 16:49:12.477 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk3NTIsImV4cCI6MTc3NTY1NjE1Mn0.7KB2Lqn1-ONSohZiY50fEzTLlRpc-DWyJrRix_pY99c]
+2026-04-07 16:49:12.478 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Ametis
+2026-04-07 16:49:12.478 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Ametis]
+2026-04-07 16:49:12.479 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)
+2026-04-07 16:49:12.480 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk3NTIsImV4cCI6MTc3NTY1NjE1Mn0.7KB2Lqn1-ONSohZiY50fEzTLlRpc-DWyJrRix_pY99c, User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)]
+2026-04-07 16:49:12.481 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:49:12.481 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:49:12.483 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 16:49:12.483 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:49:12.483 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 16:49:12.484 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk3NTIsImV4cCI6MTc3NTY1NjE1Mn0.7KB2Lqn1-ONSohZiY50fEzTLlRpc-DWyJrRix_pY99c]
+2026-04-07 16:49:12.485 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Ametis
+2026-04-07 16:49:12.485 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Ametis]
+2026-04-07 16:49:12.486 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)
+2026-04-07 16:49:12.486 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJBbWV0aXMiLCJpYXQiOjE3NzU1Njk3NTIsImV4cCI6MTc3NTY1NjE1Mn0.7KB2Lqn1-ONSohZiY50fEzTLlRpc-DWyJrRix_pY99c, User(id=56a44c47-88af-4abb-819b-cfccacd43d6b, username=Ametis, email=ametis@mail.ru, password=$2a$10$63d9onr8V4cAsB6y6nvBQeBrKia/eWkTfj8bn1VQiW6VRKiPiM9rG, role=USER, createdAt=2026-04-07T13:44:10.497678Z, updatedAt=2026-04-07T13:44:10.497678Z)]
+2026-04-07 16:49:12.488 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 16:49:12.488 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 16:49:12.489 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 0 мс
+2026-04-07 16:49:12.489 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 16:49:12.489 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 1 мс
+2026-04-07 17:06:51.022 [main] INFO  c.example.crudapp.CrudappApplication - Starting CrudappApplication using Java 21.0.9 with PID 21056 (C:\Users\Happy\Desktop\TaskManager\Practics-Spring\target\classes started by Happy in C:\Users\Happy\Desktop\TaskManager\Practics-Spring)
+2026-04-07 17:06:51.022 [main] DEBUG c.example.crudapp.CrudappApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-07 17:06:51.022 [main] INFO  c.example.crudapp.CrudappApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-07 17:06:51.461 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-07 17:06:51.488 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-04-07 17:06:51.869 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-04-07 17:06:51.874 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-07 17:06:51.874 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-04-07 17:06:51.921 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-07 17:06:51.921 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 875 ms
+2026-04-07 17:06:52.042 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-07 17:06:52.136 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52b30054
+2026-04-07 17:06:52.137 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-07 17:06:52.184 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-07 17:06:52.209 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-04-07 17:06:52.210 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-04-07 17:06:52.331 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-07 17:06:52.356 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-07 17:06:52.748 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-07 17:06:52.775 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-07 17:06:52.970 [main] DEBUG c.e.c.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-07 17:06:53.121 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-07 17:06:53.295 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-04-07 17:06:53.321 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@240b656f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@db610c3, org.springframework.security.web.context.SecurityContextHolderFilter@1314ccc1, org.springframework.security.web.header.HeaderWriterFilter@676f70dc, org.springframework.web.filter.CorsFilter@254a9f65, org.springframework.security.web.authentication.logout.LogoutFilter@608f79a8, com.example.crudapp.security.JwtAuthenticationFilter@6195ce27, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3446ab40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f67d628, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f1d2384, org.springframework.security.web.session.SessionManagementFilter@ac6da02, org.springframework.security.web.access.ExceptionTranslationFilter@5295779, org.springframework.security.web.access.intercept.AuthorizationFilter@9670873]
+2026-04-07 17:06:53.582 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-07 17:06:53.588 [main] INFO  c.example.crudapp.CrudappApplication - Started CrudappApplication in 2.793 seconds (process running for 3.004)
+2026-04-07 17:07:01.867 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-07 17:07:01.867 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-07 17:07:01.868 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-07 17:07:01.962 [http-nio-8080-exec-2] INFO  c.e.c.controller.AuthController - Registration attempt for user: Oleg
+2026-04-07 17:07:01.967 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: UserService.register(..) с аргументом: [RegisterRequest(username=Oleg, email=olegklimov2003@mail.ru, password=Oleg12)]
+2026-04-07 17:07:02.094 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.generateToken(..) с аргументом: [User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467400Z, updatedAt=2026-04-07T14:07:02.089467400Z)]
+2026-04-07 17:07:02.115 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.generateToken(..) вернул: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0
+2026-04-07 17:07:02.115 [http-nio-8080-exec-2] INFO  c.e.crudapp.service.UserService - Registered new user: Oleg
+2026-04-07 17:07:02.115 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод UserService.register(..) вернул: AuthResponse(token=eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, username=Oleg, role=USER)
+2026-04-07 17:07:02.151 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:02.165 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:02.166 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:02.195 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:02.195 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:02.198 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:02.207 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 17:07:02.213 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 6 мс
+2026-04-07 17:07:02.213 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 17:07:02.214 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 7 мс
+2026-04-07 17:07:02.225 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:02.227 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:02.227 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:02.229 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:02.229 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:02.231 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:02.233 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 17:07:02.382 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 2 мс
+2026-04-07 17:07:02.382 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 17:07:02.382 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 149 мс
+2026-04-07 17:07:21.194 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:21.195 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:21.196 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:21.198 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:21.198 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:21.200 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:21.202 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.delete(..) с аргументом: [4db6c352-0653-4b37-bb49-4512b810db5b]
+2026-04-07 17:07:21.209 [http-nio-8080-exec-8] INFO  c.e.crudapp.service.ItemService - Deleted item with id: 4db6c352-0653-4b37-bb49-4512b810db5b
+2026-04-07 17:07:21.209 [http-nio-8080-exec-8] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.delete(..) вернул: null
+2026-04-07 17:07:21.216 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:21.217 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:21.217 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:21.219 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:21.219 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:21.220 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:21.222 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 17:07:21.223 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 17:07:21.223 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 17:07:21.224 [http-nio-8080-exec-10] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 17:07:22.487 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:22.488 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:22.489 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:22.491 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:22.491 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:22.492 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:22.493 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.delete(..) с аргументом: [dfe41f87-0a6d-4f3d-8608-24089b002040]
+2026-04-07 17:07:22.494 [http-nio-8080-exec-2] INFO  c.e.crudapp.service.ItemService - Deleted item with id: dfe41f87-0a6d-4f3d-8608-24089b002040
+2026-04-07 17:07:22.494 [http-nio-8080-exec-2] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.delete(..) вернул: null
+2026-04-07 17:07:22.498 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:22.499 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:22.499 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:22.500 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:22.500 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:22.501 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:22.502 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 17:07:22.504 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 1 мс
+2026-04-07 17:07:22.504 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 1 containing com.example.crudapp.dto.ItemDto instances
+2026-04-07 17:07:22.504 [http-nio-8080-exec-3] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
+2026-04-07 17:07:23.807 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:23.808 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:23.808 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:23.810 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:23.811 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:23.812 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:23.813 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.delete(..) с аргументом: [185a4835-409f-429a-a67d-8cea32abe3dc]
+2026-04-07 17:07:23.814 [http-nio-8080-exec-5] INFO  c.e.crudapp.service.ItemService - Deleted item with id: 185a4835-409f-429a-a67d-8cea32abe3dc
+2026-04-07 17:07:23.814 [http-nio-8080-exec-5] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.delete(..) вернул: null
+2026-04-07 17:07:23.819 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.extractUsername(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0]
+2026-04-07 17:07:23.819 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.extractUsername(..) вернул: Oleg
+2026-04-07 17:07:23.820 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: CustomUserDetailsService.loadUserByUsername(..) с аргументом: [Oleg]
+2026-04-07 17:07:23.821 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод CustomUserDetailsService.loadUserByUsername(..) вернул: User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)
+2026-04-07 17:07:23.821 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: JwtService.validateToken(..) с аргументом: [eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJPbGVnIiwiaWF0IjoxNzc1NTcwODIyLCJleHAiOjE3NzU2NTcyMjJ9.K2GFyZU7399Ue4nv3W1DXtWTd4H9VJMUwnTUv4Z0MT0, User(id=b72ef015-127c-464c-a42d-dba1d19ddd6e, username=Oleg, email=olegklimov2003@mail.ru, password=$2a$10$DKxmY732RQ2n2WGs29l2s.qCIYw2LFx7Eh7pWs8AAzIJjhC1R9ane, role=USER, createdAt=2026-04-07T14:07:02.089467Z, updatedAt=2026-04-07T14:07:02.089467Z)]
+2026-04-07 17:07:23.822 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод JwtService.validateToken(..) вернул: true
+2026-04-07 17:07:23.823 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Вызов метода: ItemService.getAll(..) с аргументом: [, Page request [number: 0, size 10, sort: UNSORTED]]
+2026-04-07 17:07:23.823 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ItemService.getAll(..) выполнен за 0 мс
+2026-04-07 17:07:23.825 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.LoggingAspect - Метод ItemService.getAll(..) вернул: Page 1 of 0 containing UNKNOWN instances
+2026-04-07 17:07:23.825 [http-nio-8080-exec-6] DEBUG c.e.crudapp.aspect.PerformanceAspect - Метод ApiController.getAll(..) выполнен за 2 мс
